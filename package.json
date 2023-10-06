@@ -5,6 +5,9 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "minify": "gulp minify",
+    "build": "npm run minify && other-build-steps",
+    "deploy": "npm run build && deploy-command"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +15,15 @@
     "cypress": "^13.3.0",
     "mocha": "^10.2.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "volta": "1.1.1"
+
+  }
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.10"
   }
 }
